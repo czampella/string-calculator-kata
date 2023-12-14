@@ -1,11 +1,11 @@
 def add(numbers: str) -> int:
     res: int = 0
     splittedString = numbers.split(",")
-    print(len(splittedString))
-    if len(splittedString) < 1:
-        return 0
     for num in splittedString:
-        res = res + int(num)
+        try:
+            res = res + int(num)
+        except Exception as e:
+            return res
     return res 
 
 
