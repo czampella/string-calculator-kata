@@ -3,14 +3,22 @@ import re
 #By passing the delimeter the function will remain the same even if the request changes
 def add_formatted(numbers: str, delimiter: str) -> int:
     res: int = 0
+    negatives = []
     splittedString = numbers.split(delimiter)
+    print(splittedString)
     for num in splittedString:
         if num == '':
             return res
         try:
-            res = res + int(num)
+            a = int(num)
+            if(a<0):
+                negatives.append(num)
         except Exception as e:
-            return 'Error'
+            return 'Error, string not correctly formatted'
+        res = res + int(num)
+    if len(negatives) > 0:
+        msg = ', '.join(negatives)
+        return 'Negatives not allowed : ' + msg
     return res 
 
 #In a scenario in which requirements change fast, the only function that will need to be changed is this
@@ -33,7 +41,7 @@ def calculate_delimiter(string: str):
 
 def add(numbers: str):
     string, delimiter = calculate_delimiter(numbers)
-    print(string, delimiter)
+    
     return add_formatted(string, delimiter)
 
 if __name__ == '__main__':
