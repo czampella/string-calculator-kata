@@ -15,6 +15,6 @@ class FirstTestCases(unittest.TestCase):
         self.assertEqual(result, 37)
         
         
-if __name__ == '__main__':
-    unittest.main()
-    input("Premi Enter per chiudere la console...")
+# if __name__ == '__main__':
+#     unittest.main()
+#     input("Premi Enter per chiudere la console...")

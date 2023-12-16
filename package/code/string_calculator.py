@@ -1,6 +1,8 @@
+import re
+
 def add(numbers: str) -> int:
     res: int = 0
-    splittedString = numbers.split(",")
+    splittedString = re.split(r"\n|,", numbers)
     for num in splittedString:
         try:
             res = res + int(num)
