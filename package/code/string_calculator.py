@@ -13,9 +13,11 @@ def add_formatted(numbers: str, delimiter: str) -> int:
             a = int(num)
             if(a<0):
                 negatives.append(num)
+            elif a > 1000:
+                a = 0
         except Exception as e:
             return 'Error, string not correctly formatted'
-        res = res + int(num)
+        res = res + a
     if len(negatives) > 0:
         msg = ', '.join(negatives)
         return 'Negatives not allowed : ' + msg
