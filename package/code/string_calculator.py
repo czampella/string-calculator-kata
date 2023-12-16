@@ -1,4 +1,4 @@
-import re
+# -*- coding: utf-8 -*-
 
 #By passing the delimeter the function will remain the same even if the request changes
 def add_formatted(numbers: str, delimiter: str) -> int:
@@ -46,7 +46,4 @@ def add(numbers: str):
     
     return add_formatted(string, delimiter)
 
-if __name__ == '__main__':
-    numbers = input("Inserire una stringa di numeri")
-    add(numbers)
     
