@@ -1,3 +1,44 @@
+# To execute:
+
+# Windows:
+
+recarsi nella cartella package/dist
+eseguire il file .exe
+
+
+# Linux:
+
+nella cartella package eseguire il comando:
+
+python interface.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+
 # String Calculator Kata
 The following is a TDD Kata, an exercise in coding, refactoring and test-first, that you should apply daily for at least 15-30 minutes.
 
